@@ -26,18 +26,11 @@ int main()
     FILE * class2;
     class2 = fopen("class2.txt", "w+");
     FILE*overflow2;
-    fclose(tech);
-    fclose(art);
-    fclose(music);
-    fclose(drama);
-    fclose(computer);
-    fclose(other);
-    fclose(overflow);
-    fclose(class2);
+    FILE*main2;
+    main2 = fopen("main2.txt", "w+");
 
 
 
-int loop;
 int hold,end;
 
     {
@@ -50,30 +43,11 @@ int hold,end;
         othercount=0;
 
     int lg,lg2,lg3,lg4,lg5,lg6,lg7;
-
-
-
-
-for(int sorter= 1; sorter <= 3;sorter++)
-    {
-    tech = fopen("tech.txt", "a+");
-    art = fopen("art.txt", "a+");
-    music = fopen("music.txt", "a+");
-    drama = fopen("drama.txt", "a+");
-    computer = fopen("computer.txt", "a+");
-    other = fopen("other.txt", "a+");
-    overflow = fopen("overflow.txt", "w+");
-    class2=fopen("class2.txt","w+");
-
-
-
- end = 2;
- loop = 1;
-hold = 1 -2;
-lg = 1;
-for ( loop = 1; loop <=end ;loop++) //detect end of file
+for (int again = 1; again <= 3;again++)
 {
-
+    end = 2;
+for (int loop = 1; loop <=end ;loop++) //detect end of file
+{
     if (loop >=2)
     {
         printf("%d\t%d\t%d\t%d\t%d\t%d\t%d\n",lg,lg2,lg3,lg4,lg5,lg6,lg7);
@@ -91,7 +65,6 @@ for ( loop = 1; loop <=end ;loop++) //detect end of file
 
     if (lg == hold)
     {
-        printf(" %d %d ",hold,lg);
         end = 0;
         lg2 = 88;
     }
@@ -108,7 +81,7 @@ for ( loop = 1; loop <=end ;loop++) //detect end of file
             {
                 fprintf(tech, "%d %d %d %d %d %d %d\n",lg,lg2,lg3,lg4,lg5,lg6,lg7);
                 fprintf(class2, "%d %d %d %d %d %d 117\n",lg,lg3,lg4,lg5,lg6,lg7);
-
+                fprintf(main2, "%d %d %d %d %d %d 117\n",lg,lg3,lg4,lg5,lg6,lg7);
                 techcount = techcount + 1;
             }
             else{
@@ -124,7 +97,7 @@ for ( loop = 1; loop <=end ;loop++) //detect end of file
             {
                 fprintf(art, "%d %d %d %d %d %d %d\n",lg,lg2,lg3,lg4,lg5,lg6,lg7);
                 fprintf(class2, "%d %d %d %d %d %d 117\n",lg,lg3,lg4,lg5,lg6,lg7);
-
+                fprintf(main2, "%d %d %d %d %d %d 117\n",lg,lg3,lg4,lg5,lg6,lg7);
                 artcount = artcount + 1;
             }
             else{
@@ -140,7 +113,7 @@ for ( loop = 1; loop <=end ;loop++) //detect end of file
             {
                 fprintf(music, "%d %d %d %d %d %d %d\n",lg,lg2,lg3,lg4,lg5,lg6,lg7);
                 fprintf(class2, "%d %d %d %d %d %d 117\n",lg,lg3,lg4,lg5,lg6,lg7);
-
+                fprintf(main2, "%d %d %d %d %d %d 117\n",lg,lg3,lg4,lg5,lg6,lg7);
                 musiccount = musiccount + 1;
             }
             else{
@@ -155,7 +128,7 @@ for ( loop = 1; loop <=end ;loop++) //detect end of file
             {
                 fprintf(drama, "%d %d %d %d %d %d %d\n",lg,lg2,lg3,lg4,lg5,lg6,lg7);
                 fprintf(class2, "%d %d %d %d %d %d 117\n",lg,lg3,lg4,lg5,lg6,lg7);
-
+                fprintf(main2, "%d %d %d %d %d %d 117\n",lg,lg3,lg4,lg5,lg6,lg7);
                 dramacount = dramacount + 1;
             }
             else{
@@ -170,7 +143,7 @@ for ( loop = 1; loop <=end ;loop++) //detect end of file
             {
                 fprintf(computer, "%d %d %d %d %d %d %d\n",lg,lg2,lg3,lg4,lg5,lg6,lg7);
                 fprintf(class2, "%d %d %d %d %d %d 117\n",lg,lg3,lg4,lg5,lg6,lg7);
-
+                fprintf(main2, "%d %d %d %d %d %d 117\n",lg,lg3,lg4,lg5,lg6,lg7);
                 computercount = computercount + 1;
             }
             else{
@@ -186,7 +159,7 @@ for ( loop = 1; loop <=end ;loop++) //detect end of file
             {
                 fprintf(other, "%d %d %d %d %d %d %d\n",lg,lg2,lg3,lg4,lg5,lg6,lg7);
                 fprintf(class2, "%d %d %d %d %d %d 117\n",lg,lg3,lg4,lg5,lg6,lg7);
-
+                fprintf(main2, "%d %d %d %d %d %d 117\n",lg,lg3,lg4,lg5,lg6,lg7);
                 othercount = othercount + 1;
             }
             else{
@@ -205,21 +178,23 @@ for ( loop = 1; loop <=end ;loop++) //detect end of file
      hold = lg;
 }
 
-
+{
 char checker;
 fclose(overflow);
-overflow =fopen("overflow.txt","r");
-overflow2=fopen("secondflow.txt","w+");
- end =2;
+fopen("overflow.txt","r");
+overflow2=fopen("secondflow.txt","r+");
+ int end2 =2;
  lg= 0;
  checker= getc(overflow);
-fclose(overflow);
  int loop = 1;
  if (checker == EOF)
- {loop = 100; }
 
-
-for (; loop <= end ;loop++) //detect end of file
+ {
+     loop = 100;
+ }
+ fclose(overflow);
+}
+for (; loop <= end2 ;loop++) //detect end of file
 {
 overflow=fopen("overflow.txt","r");
     if (loop >=2)
@@ -232,10 +207,10 @@ overflow=fopen("overflow.txt","r");
         fscanf(overflow,"%d %d %d %d %d %d %d",&lg,&lg2,&lg3,&lg4,&lg5,&lg6,&lg7);
     }
 
-    end = end +1;
+    end2 = end2 +1;
    if (lg == hold)
     {
-        end = 0;
+        end2 = 0;
         lg2 = 117;
     }
 
@@ -251,7 +226,7 @@ overflow=fopen("overflow.txt","r");
             {
                 fprintf(tech, "%d %d %d %d %d %d %d\n",lg,lg2,lg3,lg4,lg5,lg6,lg7);
                 fprintf(class2, "%d %d %d %d %d %d 117\n",lg,lg3,lg4,lg5,lg6,lg7);
-
+                fprintf(main2, "%d %d %d %d %d %d 117\n",lg,lg3,lg4,lg5,lg6,lg7);
                 techcount = techcount + 1;
             }
             else{
@@ -267,7 +242,7 @@ overflow=fopen("overflow.txt","r");
             {
                 fprintf(art, "%d %d %d %d %d %d %d\n",lg,lg2,lg3,lg4,lg5,lg6,lg7);
                 fprintf(class2, "%d %d %d %d %d %d 117\n",lg,lg3,lg4,lg5,lg6,lg7);
-
+                fprintf(main2, "%d %d %d %d %d %d 117\n",lg,lg3,lg4,lg5,lg6,lg7);
                 artcount = artcount + 1;
             }
             else{
@@ -283,7 +258,7 @@ overflow=fopen("overflow.txt","r");
             {
                 fprintf(music, "%d %d %d %d %d %d %d\n",lg,lg2,lg3,lg4,lg5,lg6,lg7);
                 fprintf(class2, "%d %d %d %d %d %d 117\n",lg,lg3,lg4,lg5,lg6,lg7);
-
+                fprintf(main2, "%d %d %d %d %d %d 117\n",lg,lg3,lg4,lg5,lg6,lg7);
                 musiccount = musiccount + 1;
             }
             else{
@@ -298,7 +273,7 @@ overflow=fopen("overflow.txt","r");
             {
                 fprintf(drama, "%d %d %d %d %d %d %d\n",lg,lg2,lg3,lg4,lg5,lg6,lg7);
                 fprintf(class2, "%d %d %d %d %d %d 117\n",lg,lg3,lg4,lg5,lg6,lg7);
-
+                fprintf(main2, "%d %d %d %d %d %d 117\n",lg,lg3,lg4,lg5,lg6,lg7);
                 dramacount = dramacount + 1;
             }
             else{
@@ -313,7 +288,7 @@ overflow=fopen("overflow.txt","r");
             {
                 fprintf(computer, "%d %d %d %d %d %d %d\n",lg,lg2,lg3,lg4,lg5,lg6,lg7);
                 fprintf(class2, "%d %d %d %d %d %d 117\n",lg,lg3,lg4,lg5,lg6,lg7);
-
+                fprintf(main2, "%d %d %d %d %d %d 117\n",lg,lg3,lg4,lg5,lg6,lg7);
                 computercount = computercount + 1;
             }
             else{
@@ -329,7 +304,7 @@ overflow=fopen("overflow.txt","r");
             {
                 fprintf(other, "%d %d %d %d %d %d %d\n",lg,lg2,lg3,lg4,lg5,lg6,lg7);
                 fprintf(class2, "%d %d %d %d %d %d 117\n",lg,lg3,lg4,lg5,lg6,lg7);
-
+                fprintf(main2, "%d %d %d %d %d %d 117\n",lg,lg3,lg4,lg5,lg6,lg7);
                 othercount = othercount + 1;
             }
             else{
@@ -347,77 +322,44 @@ overflow=fopen("overflow.txt","r");
     }
     hold = lg;
 
-
-
-}
 fclose(overflow);
-fclose(overflow2);
-int move2 = 2;
 
-    int holder;
-FILE * temp;
+}
+
+int end1 =2;
+FILE *temp;
 temp = fopen("students.txt", "w+");
-overflow2 = fopen("secondflow.txt","r");
-for(int move = 1;move <= move2; move++)
+
+for (int transfer = 1; transfer <= end1 ;transfer++) //detect end of file
 {
-    move2 = move2 + 1;
-   fscanf(overflow2,"%d %d %d %d %d %d %d",&lg,&lg2,&lg3,&lg4,&lg5,&lg6,&lg7);
-   if (lg != holder )
-   {
-      fprintf(temp,"%d %d %d %d %d %d %d\n",lg,lg2,lg3,lg4,lg5,lg6,lg7);
-   }
-   if (lg == holder)
-   {
-       move2 = 0;
-   }
-   holder = lg;
-
-
-
-}
-fclose(class2);
-class2 = fopen("class2.txt", "r");
-move2=2;
-for(int move = 1;move <= move2; move++)
-{
-    move2 = move2 + 1;
-   fscanf(class2,"%d %d %d %d %d %d %d",&lg,&lg2,&lg3,&lg4,&lg5,&lg6,&lg7);
-   if (lg != holder )
-   {
-      fprintf(temp,"%d %d %d %d %d %d %d\n",lg,lg2,lg3,lg4,lg5,lg6,lg7);
-   }
-   if (lg == holder)
-   {
-       move2 = 0;
-   }
-   holder = lg;
-
-
-
-}
-fclose(temp);
-fclose(class2);
-fclose(overflow2);
+class2 = fopen("students.txt", "r");
+    for (int l = 1; l <= transfer; l++)
+    {
+        fscanf(class2,"%d %d %d %d %d %d %d",&lg,&lg2,&lg3,&lg4,&lg5,&lg6,&lg7);
+        fprintf(temp,"%d %d %d %d %d %d %d\n",lg,lg2,lg3,lg4,lg5,lg6,lg7);
 
     }
+    end1 = end1 +1;
+   if (lg == hold)
+    {
+        end1 = 0;
+        lg2 = 117;
+    }
+hold = lg;
+fclose(class2);
+}
 
-
+}
 
 fclose(class2);
-int a[6];
-converter(othercount,computercount,dramacount,musiccount,techcount,artcount,a);
-printf("\n%d %d %d %d %d %d\n",othercount,computercount,dramacount,musiccount,techcount,artcount);
-for(int out = 0; out <= 5;out++)
-{
-    printf(" %d ", a[out]);
-}
+fclose(overflow2);
+printf("\n%d %d %d %d %d %d",othercount,computercount,dramacount,musiccount,techcount,artcount);
 fclose(other);
-
+fclose(overflow);
 fclose(computer);
 fclose(drama);
 fclose(music);
 fclose(tech);
-//filler program
 
     return 0;
     }

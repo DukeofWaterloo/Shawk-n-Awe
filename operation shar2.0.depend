@@ -1,4 +1,14 @@
 # depslib dependency file v1.0
-1578595418 source:c:\users\kandr_58v7rrf\onedrive\desktop\new folder (4)\operation shar2.0\base.c
+1578698965 source:c:\users\kandr_58v7rrf\onedrive\desktop\new folder (4)\operation shar2.0\base.c
 	<stdio.h>
+
+1578699005 source:c:\users\kandr_58v7rrf\onedrive\desktop\new folder (4)\operation shar2.0\rngdata.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+
+1578698931 source:c:\users\kandr_58v7rrf\onedrive\desktop\new folder (4)\operation shar2.0\converter.c
+	<stdio.h>
+
+1578690481 source:c:\users\kandr_58v7rrf\onedrive\desktop\new folder (4)\operation shar2.0\cleanbase.c
 
