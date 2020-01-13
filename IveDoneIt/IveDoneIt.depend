@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1578910037 source:c:\users\nick\desktop\comp sci 2019\projects\new folder\ivedoneit\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
