@@ -7,7 +7,7 @@ int main()
 {
     FILE *fp;
     char str[MAXCHAR];
-    char* filename = "c:\\Users\\Nick\\Desktop\\Comp Sci 2019\\Projects\\Over Built and under Paid\\Operation Shaw-k\\Old Info\\ExperienceWDHS2019\\CSV\\Experience a Day 2019.csv";
+    char* filename = "./Experience a Day 2019.csv";
     int n = 0;
     int lineTotal = 0;
     int CommaAmount = 0;
