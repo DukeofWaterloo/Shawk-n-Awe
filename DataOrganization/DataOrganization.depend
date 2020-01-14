@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1579030238 source:c:\users\engadmin\documents\codeblocks\dataorganization\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
