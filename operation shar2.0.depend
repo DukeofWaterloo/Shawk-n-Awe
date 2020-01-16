@@ -1,0 +1,29 @@
+# depslib dependency file v1.0
+1579217041 source:c:\users\kandr_58v7rrf\onedrive\desktop\new folder (4)\operation shar2.0\base.c
+	<stdio.h>
+	<windows.h>
+
+1579034384 source:c:\users\kandr_58v7rrf\onedrive\desktop\new folder (4)\operation shar2.0\rngdata.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+
+1579214493 source:c:\users\kandr_58v7rrf\onedrive\desktop\new folder (4)\operation shar2.0\converter.c
+	<stdio.h>
+
+1578690481 source:c:\users\kandr_58v7rrf\onedrive\desktop\new folder (4)\operation shar2.0\cleanbase.c
+
+1579212131 source:c:\users\kandr_58v7rrf\onedrive\desktop\new folder (4)\operation shar2.0\tester.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<colour.h>
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+
+1579033614 source:c:\users\kandr_58v7rrf\onedrive\desktop\new folder (4)\operation shar2.0\structuretofile.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
