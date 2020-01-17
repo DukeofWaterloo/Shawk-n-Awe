@@ -1,0 +1,44 @@
+ int cleanbase()
+ {
+     int lg,lg2,lg3,lg4,lg5,lg6,lg7
+//sort one
+File * student;
+student = fopen("student.txt","r")
+for (int loop = 1; loop <=end ;loop++)
+{
+    fscanf(student,"%d %d %d %d %d %d %d",&lg,&lg2,&lg3,&lg4,&lg5,&lg6,&lg7);
+
+    switch()
+    {
+
+    case 1:
+        {
+        }
+        break;
+    case 2:
+        {
+        }
+        break;
+    case 3:
+        {
+        }
+        break;
+    case 4:
+        {
+        }
+        break;
+    case 5:
+        {
+        }
+        break;
+    case 6:
+        {
+        }
+        break;
+    default:
+
+        break;
+
+    }
+    }
+ }
