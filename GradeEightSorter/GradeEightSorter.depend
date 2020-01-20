@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1579320067 source:c:\users\kyle\documents\codeblockswork\gradeeightsorter\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1579392488 source:c:\users\kyle\documents\code blocks\codeblockswork\gradeeightsorter\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
