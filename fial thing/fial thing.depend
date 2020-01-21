@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1579631868 source:c:\users\kandr_58v7rrf\onedrive\desktop\new folder (4)\fial thing\shmak.c
+	<stdio.h>
+	<windows.h>
+	<stdlib.h>
+	<string.h>
+	<colour.h>
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+
