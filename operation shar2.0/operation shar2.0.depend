@@ -1,0 +1,34 @@
+# depslib dependency file v1.0
+1579621411 source:c:\users\kandr_58v7rrf\onedrive\desktop\new folder (4)\operation shar2.0\base.c
+	<stdio.h>
+	<windows.h>
+	<stdlib.h>
+	<string.h>
+	<colour.h>
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+
+1579621015 source:c:\users\kandr_58v7rrf\onedrive\desktop\new folder (4)\operation shar2.0\rngdata.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<colour.h>
+
+1579554964 source:c:\users\kandr_58v7rrf\onedrive\desktop\new folder (4)\operation shar2.0\converter.c
+
+1579537056 source:c:\users\kandr_58v7rrf\onedrive\desktop\new folder (4)\operation shar2.0\cleanbase.c
+	<stdio.h>
+	<stdlib.h>
+
+1579621114 source:c:\users\kandr_58v7rrf\onedrive\desktop\new folder (4)\operation shar2.0\tester.c
+
+1579033614 source:c:\users\kandr_58v7rrf\onedrive\desktop\new folder (4)\operation shar2.0\structuretofile.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1579536379 source:c:\users\kandr_58v7rrf\onedrive\desktop\new folder (4)\operation shar2.0\dukessortersorter.c
+	<stdio.h>
+	<stdlib.h>
+
