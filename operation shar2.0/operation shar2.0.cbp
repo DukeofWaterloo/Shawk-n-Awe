@@ -34,21 +34,6 @@
 		<Unit filename="base.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="cleanbase.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="converter.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="rngdata.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="structuretofile.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="tester.c">
-			<Option compilerVar="CC" />
-		</Unit>
 		<Extensions>
 			<code_completion />
 			<envvars />

@@ -122,7 +122,7 @@ int main()
             position++;
             n++;
         }
-            printf("\nStudent %d:\n| Name: %s, %s \n| School: %s\n| Teacher: %s\n| Choice One: %s\n| Choice Two: %s\n| Choice Three: %s\n| Choice Four: %s\n| Choice Five: %s\n| Choice Six: %s", studentNumber, student[studentNumber].NameLast, student[studentNumber].NameFirst, student[studentNumber].School, student[studentNumber].Teacher, student[studentNumber].Choice1, student[studentNumber].Choice2, student[studentNumber].Choice3, student[studentNumber].Choice4, student[studentNumber].Choice5, student[studentNumber].Choice6);
+                printf("\nStudent %d:\n| Name: %s, %s \n| School: %s\n| Teacher: %s\n| Choice One: %s\n| Choice Two: %s\n| Choice Three: %s\n| Choice Four: %s\n| Choice Five: %s\n| Choice Six: %s", studentNumber, student[studentNumber].NameLast, student[studentNumber].NameFirst, student[studentNumber].School, student[studentNumber].Teacher, student[studentNumber].Choice1, student[studentNumber].Choice2, student[studentNumber].Choice3, student[studentNumber].Choice4, student[studentNumber].Choice5, student[studentNumber].Choice6);
 
 int nopick = 0;
 int choice[6] ={0,0,0,0,0,0};
@@ -131,12 +131,12 @@ int choice[6] ={0,0,0,0,0,0};
 
 
 
-        char s1[]="Drama";
+         char s1[]="Drama";
          if(strcmp(s1,student[studentNumber].Choice1)==0)
          {
              choice[0]=1;
          }
-        char s2[]="Art";
+         char s2[]="Art";
          if(strcmp(s2,student[studentNumber].Choice1)==0)
          {
              choice[0]=2;
@@ -163,10 +163,9 @@ int choice[6] ={0,0,0,0,0,0};
          }
          char s7[]= "\0";
          if(strcmp(s7,student[studentNumber].Choice1)==0)
-        {
+         {
             nopick = nopick + 1;
-        }
-
+         }
          if(strcmp(s1,student[studentNumber].Choice2)==0)
          {
              choice[1]=1;
@@ -192,12 +191,10 @@ int choice[6] ={0,0,0,0,0,0};
              choice[1]=6;
          }
          if(strcmp(s7,student[studentNumber].Choice2)==0)
-        {
+         {
             nopick = nopick + 1;
-        }
-
-
-        if(strcmp(s1,student[studentNumber].Choice3)==0)
+         }
+         if(strcmp(s1,student[studentNumber].Choice3)==0)
          {
              choice[2]=1;
          }
@@ -222,11 +219,9 @@ int choice[6] ={0,0,0,0,0,0};
              choice[2]=6;
          }
          if(strcmp(s7,student[studentNumber].Choice3)==0)
-        {
+         {
             nopick = nopick + 1;
-        }
-
-
+         }
          if(strcmp(s1,student[studentNumber].Choice4)==0)
          {
              choice[3]=1;
@@ -252,12 +247,9 @@ int choice[6] ={0,0,0,0,0,0};
              choice[3]=6;
          }
          if(strcmp(s7,student[studentNumber].Choice4)==0)
-        {
+         {
             nopick = nopick + 1;
-        }
-
-
-
+         }
          if(strcmp(s1,student[studentNumber].Choice5)==0)
          {
              choice[4]=1;
@@ -283,9 +275,9 @@ int choice[6] ={0,0,0,0,0,0};
              choice[4]=6;
          }
          if(strcmp(s7,student[studentNumber].Choice5)==0)
-        {
+         {
             nopick = nopick + 1;
-        }
+         }
          if(strcmp(s1,student[studentNumber].Choice6)==0)
          {
              choice[5]=1;
@@ -328,22 +320,8 @@ printf("%d",nopick);
                     choice[order + 1] = 0;
                     printf("\t\t\t%d %d %d %d %d %d %d \n\n\n\n", studentNumber, choice[0],choice[1],choice[2],choice[3],choice[4],choice[5]);
                     }
-
-
                 }
             }
-
-
-
-
-
-
-
-
-
-
-
-
 
     int lower = 1, upper = 6, count = 1;
     srand(time(0));
@@ -359,8 +337,6 @@ printf("%d",nopick);
 
     for(int place = 0; place <= 5; place ++)
                   {
-
-
                       if (choice[0] == 0)
                       {
                           choice[place] = num;
@@ -384,19 +360,11 @@ printf("%d",nopick);
                           choice[place]=num;
 
                           num = 0;
-
-
                       }
-
 
                   }}
 
-
-
 }
-
-
-
         }
 printf("\n\t\t\t%d %d %d %d %d %d %d \n\n\n\n", studentNumber, choice[0],choice[1],choice[2],choice[3],choice[4],choice[5]);
 
@@ -409,19 +377,11 @@ fprintf(imgoingtodocalculus,"%d %d %d %d %d %d %d \n", studentNumber, choice[0],
         CommaAmount = 0;
      //   printf("n value %d \nCommas: %d \nPosition: %d \n Character Value @ n: %c\nFirst Name: %s\nLast Name: %s\n School: %s \nStudent Number: %d\n", n, CommaAmount, position, str[n], student[studentNumber].NameFirst, student[studentNumber].NameLast, student[studentNumber].School, studentNumber);
 
-
-
     }
 
     fclose(fp);
     fclose(imgoingtodocalculus);
     studentNumber = studentNumber - 2;
-
-
-
-
-
-
 
 struct kids
 {
@@ -453,8 +413,7 @@ for(int classs = 2; classs <= 2; classs++)
     totalclass = 0;
 
 system("cls");
-printf("please enter the number of periods:");
-scanf("%d",&classes);
+classes= 4;
 
 recomended = (studentNumber*3)/(6* classes);
 printf("\n%d is the recomended class size %d", recomended, studentNumber);
@@ -972,34 +931,7 @@ fclose(class2);
 fclose(overflow2);
 
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-fclose(tech);
+    fclose(tech);
     fclose(art);
     fclose(music);
     fclose(drama);
@@ -1144,23 +1076,7 @@ if(lg != EOF)
 
 printf("\n\t\t%d %d %d %d %d %d %d\n",lg,lg2,lg3,lg4,lg5,lg6,lg7);
 printf("\n%d %d %d %d",lg,studentchoice[lg].choice1,studentchoice[lg].choice2,studentchoice[lg].choice3 );
-
-
-
-
-
-
-
-
 }
-
-
-
-
-
-
-
-
 int hold= lg;
 fscanf(overflow2,"%d %d %d %d %d %d %d",&lg,&lg2,&lg3,&lg4,&lg5,&lg6,&lg7);
 move2 = move2 + 1;
@@ -1168,9 +1084,6 @@ if (hold == lg)
 {
     move2 = 0;
 }
-
-
-
 
 printf("\n\n\n\t\t\t %d %d %d %d %d %d\n",techcount,artcount,musiccount,dramacount,computercount,othercount);
 }
@@ -1188,14 +1101,7 @@ printf("\n\n\n\t\t\t %d %d %d %d %d %d\n",techcount,artcount,musiccount,dramacou
 
 
 class2 = fopen("class2","r");
-    }
-
-
-
-
-
-
-
+}
 int s = 1;
 heck = heck- 2;
 for (int k= 2; k <= heck; k++)
@@ -1232,40 +1138,18 @@ printf("\n%d %d %d %d %d\t%d",k,studentchoice[k].choice1,studentchoice[k].choice
 
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 techcount =     (classes * studentcap[2])- techcount ;
 musiccount =    (classes * studentcap[4])- musiccount;
 dramacount=     (classes * studentcap[5])- dramacount;
 computercount=  (classes * studentcap[3])- computercount;
 artcount=       (classes * studentcap[1])- artcount;
 othercount=     (classes * studentcap[0])- othercount;
-
-
-
-
-
 int k;
 scanf("%d",&k);
 {
-
     int sortedclass[11][4];
     for(int fil = 0; fil <= 3; fil++)
     {
-
         sortedclass [0][fil] = techcount/4;
         sortedclass [1][fil] = artcount/4;
         sortedclass [2][fil] = musiccount/4;
@@ -1298,19 +1182,23 @@ for (int h = 0;h <= 999; h++)
             if (sortedclass[studentchoice[sh].choice1 - 1][period] >= 1)
             {
                 sortedclass[studentchoice[sh].choice1 - 1][period]--;
+                 studentchoice[sh].class1 = studentchoice[sh].choice1;
             }
             else if (sortedclass[studentchoice[sh].choice1 - 1][period] ==0)
             {
                 if (sortedclass[studentchoice[sh].choice2 - 1][period] >= 1)
                 {
                     sortedclass[studentchoice[sh].choice2 - 1][period]--;
+                    studentchoice[sh].class1 = studentchoice[sh].choice2;
                     studentchoice[sh].choice2 = studentchoice[sh].choice1;
+
                 }
                 else if (sortedclass[studentchoice[sh].choice2 - 1][period] == 0)
                 {
                     if (sortedclass[studentchoice[sh].choice3 - 1][period] >= 1)
                     {
                         sortedclass[studentchoice[sh].choice3 - 1][period]--;
+                        studentchoice[sh].class1 = studentchoice[sh].choice3;
                         studentchoice[sh].choice3 = studentchoice[sh].choice1;
 
                     }
@@ -1319,6 +1207,7 @@ for (int h = 0;h <= 999; h++)
                        if (sortedclass[studentchoice[sh].choice4 - 1][period] >= 1)
                         {
                             sortedclass[studentchoice[sh].choice4 - 1][period]--;
+                            studentchoice[sh].class1 = studentchoice[sh].choice4;
                             studentchoice[sh].choice4 = studentchoice[sh].choice1;
 
                         }
@@ -1334,13 +1223,15 @@ for (int h = 0;h <= 999; h++)
             if (sortedclass[studentchoice[sh].choice2 - 1][period] >= 1)
                 {
                     sortedclass[studentchoice[sh].choice2 - 1][period]--;
+                    studentchoice[sh].class2 = studentchoice[sh].choice2;
 
                 }
-            else if (sortedclass[studentchoice[sh].choice2 - 1][period] == 0)
+                else if (sortedclass[studentchoice[sh].choice2 - 1][period] == 0)
                 {
                     if (sortedclass[studentchoice[sh].choice3 - 1][period] >= 1)
                     {
                         sortedclass[studentchoice[sh].choice3 - 1][period]--;
+                        studentchoice[sh].class2 = studentchoice[sh].choice3;
                         studentchoice[sh].choice3 = studentchoice[sh].choice2;
 
                     }
@@ -1348,6 +1239,7 @@ for (int h = 0;h <= 999; h++)
                     {
                         if (studentchoice[sh].choice4 == 7)
                         {
+                            studentchoice[sh].class2 = studentchoice[sh].choice4;
                             studentchoice[sh].choice4 = studentchoice[sh].choice3;
                             studentchoice[sh].choice3 = studentchoice[sh].choice2;
                             studentchoice[sh].choice2 = 7;
@@ -1358,6 +1250,7 @@ for (int h = 0;h <= 999; h++)
                             if (sortedclass[studentchoice[sh].choice4 - 1][period] >= 1)
                             {
                                 sortedclass[studentchoice[sh].choice4 - 1][period]--;
+                                studentchoice[sh].class2 = studentchoice[sh].choice4;
                                 studentchoice[sh].choice4 = studentchoice[sh].choice2;
                             }
                             else if(sortedclass[studentchoice[sh].choice4 - 1][period] ==0)
@@ -1376,11 +1269,13 @@ for (int h = 0;h <= 999; h++)
             if (sortedclass[studentchoice[sh].choice3 - 1][period] >= 1)
                 {
                     sortedclass[studentchoice[sh].choice3 - 1][period]--;
+                    studentchoice[sh].class3 = studentchoice[sh].choice3;
                 }
             else if (sortedclass[studentchoice[sh].choice3 - 1][period] == 0)
                 {
                     if (studentchoice[sh].choice4 == 7)
                     {
+                        studentchoice[sh].class3 = studentchoice[sh].choice4;
                         studentchoice[sh].choice4 = studentchoice[sh].choice3;
                         studentchoice[sh].choice3 = 7;
                         sortedclass[6][period]--;
@@ -1390,19 +1285,18 @@ for (int h = 0;h <= 999; h++)
                         if (sortedclass[studentchoice[sh].choice4 - 1][period] >= 1)
                         {
                             sortedclass[studentchoice[sh].choice4 - 1][period]--;
+                            studentchoice[sh].class3 = studentchoice[sh].choice4;
                             studentchoice[sh].choice4 = studentchoice[sh].choice3;
                         }
                         else if(sortedclass[studentchoice[sh].choice4 - 1][period] ==0)
                         {
                             sortedclass[6][period]--;
+                            studentchoice[sh].class3 = studentchoice[sh].choice4;
                             studentchoice[sh].choice3 = 7;
                         }
                     }
-
-
                 }
         }
-
       if( period == 3)
       {
             if(studentchoice[sh].choice4 != 7)
@@ -1410,10 +1304,12 @@ for (int h = 0;h <= 999; h++)
                 if (sortedclass[studentchoice[sh].choice4 - 1][period] >= 1)
             {
                 sortedclass[studentchoice[sh].choice4 - 1][period]--;
+                studentchoice[sh].class4 = studentchoice[sh].choice4;
             }
             else if(sortedclass[studentchoice[sh].choice4 - 1][period] ==0)
             {
                 sortedclass[6][period]--;
+                studentchoice[sh].class4 = studentchoice[sh].choice4;
                 studentchoice[sh].choice4 = 7;
 
             }
@@ -1421,6 +1317,7 @@ for (int h = 0;h <= 999; h++)
             else if(studentchoice[sh].choice4 == 7)
             {
                 sortedclass[6][period]--;
+                studentchoice[sh].class4 = studentchoice[sh].choice4;
             }
 
       }
@@ -1430,19 +1327,6 @@ else if (studentchoice[sh].choice1 == 10 && studentchoice[sh].choice2 == 10 && s
           noclassstudents[fail] = sh;
         fail++;
       }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
   }
   int c1,c2,c3,c4,c5,c6,c7;
@@ -1462,7 +1346,6 @@ else if (studentchoice[sh].choice1 == 10 && studentchoice[sh].choice2 == 10 && s
   }
 
 
-Sleep(50);
 
 
 
@@ -1477,13 +1360,139 @@ Sleep(50);
   }
 
 }
+
+int studentchecker;
+scanf("%d",&studentchecker);
+
+printf("\nStudent %d:\n| Name: %s, %s \n| School: %s\n| Teacher: %s\n| Choice One: %s\n| Choice Two: %s\n| Choice Three: %s\n| Choice Four: %s\n| Choice Five: %s\n| Choice Six: %s", studentchecker, student[studentchecker].NameLast, student[studentchecker].NameFirst, student[studentchecker].School, student[studentchecker].Teacher, student[studentchecker].Choice1, student[studentchecker].Choice2, student[studentchecker].Choice3, student[studentchecker].Choice4, student[studentchecker].Choice5, student[studentchecker].Choice6);
+printf("\n\n%d %d %d %d %d",studentchecker,studentchoice[studentchecker].class1,studentchoice[studentchecker].class2,studentchoice[studentchecker].class3,studentchoice[studentchecker].class4 );
+FILE * DoomGuy;
+DoomGuy = fopen("DoomGuy.csv","w+");
+studentchecker =1;
+for(int spltr = 2; spltr <= heck; spltr++)
+{
+    studentchecker++;
+    fprintf(DoomGuy,"%s, %s",student[studentchecker].NameFirst,student[studentchecker].NameLast);
+if(studentchoice[studentchecker].class1 == 1)
+{
+    fprintf(DoomGuy,",Design and Technology");
+}
+if(studentchoice[studentchecker].class1 == 2)
+{
+    fprintf(DoomGuy,",Art");
+}
+if(studentchoice[studentchecker].class1 == 3)
+{
+    fprintf(DoomGuy,",Music/Vocals");
+}
+if(studentchoice[studentchecker].class1 == 4)
+{
+    fprintf(DoomGuy,",Drama");
+}
+if(studentchoice[studentchecker].class1 == 5)
+{
+    fprintf(DoomGuy,",Computer Applications");
+}
+if(studentchoice[studentchecker].class1 == 6)
+{
+    fprintf(DoomGuy,",Family Studies");
+}
+if(studentchoice[studentchecker].class1 == 7)
+{
+    fprintf(DoomGuy,",Guidance");
+}
+if(studentchoice[studentchecker].class2 == 1)
+{
+    fprintf(DoomGuy,",Design and Technology");
+}
+if(studentchoice[studentchecker].class2 == 2)
+{
+    fprintf(DoomGuy,",Art");
+}
+if(studentchoice[studentchecker].class2 == 3)
+{
+    fprintf(DoomGuy,",Music/Vocals");
+}
+if(studentchoice[studentchecker].class2 == 4)
+{
+    fprintf(DoomGuy,",Drama");
+}
+if(studentchoice[studentchecker].class2 == 5)
+{
+    fprintf(DoomGuy,",Computer Applications");
+}
+if(studentchoice[studentchecker].class2 == 6)
+{
+    fprintf(DoomGuy,",Family Studies");
+}
+if(studentchoice[studentchecker].class2 == 7)
+{
+    fprintf(DoomGuy,",Guidance");
+}
+if(studentchoice[studentchecker].class3 == 1)
+{
+    fprintf(DoomGuy,",Design and Technology");
+}
+if(studentchoice[studentchecker].class3 == 2)
+{
+    fprintf(DoomGuy,",Art");
+}
+if(studentchoice[studentchecker].class3 == 3)
+{
+    fprintf(DoomGuy,",Music/Vocals");
+}
+if(studentchoice[studentchecker].class3 == 4)
+{
+    fprintf(DoomGuy,",Drama");
+}
+if(studentchoice[studentchecker].class3 == 5)
+{
+    fprintf(DoomGuy,",Computer Applications");
+}
+if(studentchoice[studentchecker].class3 == 6)
+{
+    fprintf(DoomGuy,",Family Studies");
+}
+if(studentchoice[studentchecker].class3 == 7)
+{
+    fprintf(DoomGuy,",Guidance");
+}
+if(studentchoice[studentchecker].class4 == 1)
+{
+    fprintf(DoomGuy,",Design and Technology");
+}
+if(studentchoice[studentchecker].class4 == 2)
+{
+    fprintf(DoomGuy,",Art");
+}
+if(studentchoice[studentchecker].class4 == 3)
+{
+    fprintf(DoomGuy,",Music/Vocals");
+}
+if(studentchoice[studentchecker].class4 == 4)
+{
+    fprintf(DoomGuy,",Drama");
+}
+if(studentchoice[studentchecker].class4 == 5)
+{
+    fprintf(DoomGuy,",Computer Applications");
+}
+if(studentchoice[studentchecker].class4 == 6)
+{
+    fprintf(DoomGuy,",Family Studies");
+}
+if(studentchoice[studentchecker].class4 == 7)
+{
+    fprintf(DoomGuy,",Guidance");
+}
+fprintf(DoomGuy,"\n");
+}
+        fclose(DoomGuy);
+
+
 fclose(class2);
-int a[6];
 
 
-printf("\n\n\n\n\n");
-
-printf("Drama has\t\t\t%d spaces left\nArt has\t\t\t\t%d spaces left\nFamily Studies has\t\t%d spaces left\nDesign and Technology has\t%d spaces left\nMusic/Vocals has\t\t%d spaces left\nComputer Applications has \t%d spaces left\n",a[2],a[5],a[0],a[4],a[3],a[1]);
 fclose(other);
 
 fclose(computer);
@@ -1492,7 +1501,7 @@ fclose(music);
 fclose(tech);
 
 //filler program
-// 4 30 4 30 4 30 4 30 4 30 4 30 4
+
 
 
     return 0;
