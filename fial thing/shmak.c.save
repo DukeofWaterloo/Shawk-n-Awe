@@ -1220,12 +1220,12 @@ for (int h = 0;h <= 999; h++)
       }
       if( period == 1)
       {
-
+            
                 if (sortedclass[studentchoice[sh].choice2 - 1][period] >= 1)
                 {
                     sortedclass[studentchoice[sh].choice2 - 1][period]--;
-                    studentchoice[sh].class2 = studentchoice[sh].choice2;
-
+                    studentchoice[sh].class1 = studentchoice[sh].choice2;
+                    studentchoice[sh].choice2 = studentchoice[sh].choice1;
 
                 }
                 else if (sortedclass[studentchoice[sh].choice2 - 1][period] == 0)
@@ -1252,7 +1252,7 @@ for (int h = 0;h <= 999; h++)
                     }
                 }
             }
-
+      
       if( period == 2)
       {
             if (sortedclass[studentchoice[sh].choice3 - 1][period] >= 1)
@@ -1458,7 +1458,7 @@ if(studentchoice[studentchecker].class4 == 7)
 {
     fprintf(DoomGuy,",Guidance");
 }
-fprintf(DoomGuy,", %s, %s\n",student[studentchecker].Teacher,student[studentchecker].Teacher);
+fprintf(DoomGuy,",%d\n",student[studentchecker].Teacher);
 }
 
     fclose(DoomGuy);
