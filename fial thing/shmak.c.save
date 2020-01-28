@@ -13,7 +13,15 @@ int main()
     FILE *fp;
     char str[MAXCHAR];
     char* filename = "./Experience a Day 2019.csv";
+    char s1[]="Drama";
+    char s2[]="Art";
+    char s3[]="Family Studies";
+    char s5[]="Music/Vocals";
+    char s6[]="Computer Applications";
+    char s4[]="Design and Technology";
+    char s7[]= "\0";
     int n = 0;
+    int studentchecker;
     int lineTotal = 0;
     int skedual[4][7];
     int CommaAmount = 0;
@@ -35,6 +43,18 @@ int main()
         char Choice5[50];
         char Choice6[50];
     } student[lineTotal];
+    struct kids
+{
+    int name;
+    int choice1;
+    int choice2;
+    int choice3;
+    int choice4;
+    int class1;
+    int class2;
+    int class3;
+    int class4;
+    }studentchoice[1000];
     fp = fopen(filename, "r");
     if (fp == NULL){
         printf("Could not open file %s", filename);
@@ -113,215 +133,107 @@ int main()
             n++;
         }
         printf("\nStudent %d:\n| Name: %s, %s \n| School: %s\n| Teacher: %s\n| Choice One: %s\n| Choice Two: %s\n| Choice Three: %s\n| Choice Four: %s\n| Choice Five: %s\n| Choice Six: %s", studentNumber, student[studentNumber].NameLast, student[studentNumber].NameFirst, student[studentNumber].School, student[studentNumber].Teacher, student[studentNumber].Choice1, student[studentNumber].Choice2, student[studentNumber].Choice3, student[studentNumber].Choice4, student[studentNumber].Choice5, student[studentNumber].Choice6);
-
 int nopick = 0;
 int choice[6] ={0,0,0,0,0,0};
-     if (studentNumber >= 2)
-     {
+     if (studentNumber >= 2){
+         if(strcmp(s1,student[studentNumber].Choice1)==0){
+             choice[0]=1;}
+         if(strcmp(s2,student[studentNumber].Choice1)==0){
+             choice[0]=2;}
+         if(strcmp(s3,student[studentNumber].Choice1)==0){
+             choice[0]=3;}
+         if(strcmp(s4,student[studentNumber].Choice1)==0){
+             choice[0]=4;}
+         if(strcmp(s5,student[studentNumber].Choice1)==0){
+             choice[0]=5;}
+         if(strcmp(s6,student[studentNumber].Choice1)==0){
+             choice[0]=6;}
+         if(strcmp(s7,student[studentNumber].Choice1)==0){
+            nopick = nopick + 1;}
+         if(strcmp(s1,student[studentNumber].Choice2)==0){
+             choice[1]=1;}
+         if(strcmp(s2,student[studentNumber].Choice2)==0){
+             choice[1]=2;}
+         if(strcmp(s3,student[studentNumber].Choice2)==0){
+             choice[1]=3;}
+         if(strcmp(s4,student[studentNumber].Choice2)==0){
+             choice[1]=4;}
+         if(strcmp(s5,student[studentNumber].Choice2)==0){
+             choice[1]=5;}
+         if(strcmp(s6,student[studentNumber].Choice2)==0){
+             choice[1]=6;}
+         if(strcmp(s7,student[studentNumber].Choice2)==0){
+            nopick = nopick + 1;}
+         if(strcmp(s1,student[studentNumber].Choice3)==0){
+             choice[2]=1;}
+         if(strcmp(s2,student[studentNumber].Choice3)==0){
+            choice[2]=2;}
+         if(strcmp(s3,student[studentNumber].Choice3)==0){
+             choice[2]=3;}
+         if(strcmp(s4,student[studentNumber].Choice3)==0){
+             choice[2]=4;}
+         if(strcmp(s5,student[studentNumber].Choice3)==0){
+             choice[2]=5;}
+         if(strcmp(s6,student[studentNumber].Choice3)==0){
+             choice[2]=6;}
+         if(strcmp(s7,student[studentNumber].Choice3)==0){
+            nopick = nopick + 1;}
+         if(strcmp(s1,student[studentNumber].Choice4)==0){
+             choice[3]=1;}
+         if(strcmp(s2,student[studentNumber].Choice4)==0){
+             choice[3]=2;}
+         if(strcmp(s3,student[studentNumber].Choice4)==0){
+             choice[3]=3;}
+         if(strcmp(s4,student[studentNumber].Choice4)==0){
+             choice[3]=4;}
+         if(strcmp(s5,student[studentNumber].Choice4)==0){
+             choice[3]=5;}
+         if(strcmp(s6,student[studentNumber].Choice4)==0){
+             choice[3]=6;}
+         if(strcmp(s7,student[studentNumber].Choice4)==0){
+            nopick = nopick + 1;}
+         if(strcmp(s1,student[studentNumber].Choice5)==0){
+             choice[4]=1;}
+         if(strcmp(s2,student[studentNumber].Choice5)==0){
+             choice[4]=2;}
+         if(strcmp(s3,student[studentNumber].Choice5)==0){
+             choice[4]=3;}
+         if(strcmp(s4,student[studentNumber].Choice5)==0){
+             choice[4]=4;}
+         if(strcmp(s5,student[studentNumber].Choice5)==0){
+             choice[4]=5;}
+         if(strcmp(s6,student[studentNumber].Choice5)==0){
+             choice[4]=6;}
+         if(strcmp(s7,student[studentNumber].Choice5)==0){
+            nopick = nopick + 1;}
+         if(strcmp(s1,student[studentNumber].Choice6)==0){
+             choice[5]=1;}
+         if(strcmp(s2,student[studentNumber].Choice6)==0){
+             choice[5]=2;}
+         if(strcmp(s3,student[studentNumber].Choice6)==0){
+             choice[5]=3;}
+         if(strcmp(s4,student[studentNumber].Choice6)==0){
+             choice[5]=4;}
+         if(strcmp(s5,student[studentNumber].Choice6)==0){
+             choice[5]=5;}
+         if(strcmp(s6,student[studentNumber].Choice6)==0){
+             choice[5]=6;}
+         if(strcmp(s7,student[studentNumber].Choice6)==0){
+            nopick = nopick + 1;}
+        if (nopick >= 1){
+            for (int lol = 1; lol <= nopick; lol++ ){
+                for (int order = 0; order <= 5; order ++){
+                    if (choice[order] == 0 && order < 5){
+                        choice[order] = choice[(order + 1)];
+                        choice[order + 1] = 0;}}}
 
-
-
-         char s1[]="Drama";
-         if(strcmp(s1,student[studentNumber].Choice1)==0)
-         {
-             choice[0]=1;
-         }
-         char s2[]="Art";
-         if(strcmp(s2,student[studentNumber].Choice1)==0)
-         {
-             choice[0]=2;
-         }
-         char s3[]="Family Studies";
-         if(strcmp(s3,student[studentNumber].Choice1)==0)
-         {
-             choice[0]=3;
-         }
-         char s4[]="Design and Technology";
-         if(strcmp(s4,student[studentNumber].Choice1)==0)
-         {
-             choice[0]=4;
-         }
-         char s5[]="Music/Vocals";
-         if(strcmp(s5,student[studentNumber].Choice1)==0)
-         {
-             choice[0]=5;
-         }
-         char s6[]="Computer Applications";
-         if(strcmp(s6,student[studentNumber].Choice1)==0)
-         {
-             choice[0]=6;
-         }
-         char s7[]= "\0";
-         if(strcmp(s7,student[studentNumber].Choice1)==0)
-         {
-            nopick = nopick + 1;
-         }
-         if(strcmp(s1,student[studentNumber].Choice2)==0)
-         {
-             choice[1]=1;
-         }
-         if(strcmp(s2,student[studentNumber].Choice2)==0)
-         {
-             choice[1]=2;
-         }
-         if(strcmp(s3,student[studentNumber].Choice2)==0)
-         {
-             choice[1]=3;
-         }
-         if(strcmp(s4,student[studentNumber].Choice2)==0)
-         {
-             choice[1]=4;
-         }
-         if(strcmp(s5,student[studentNumber].Choice2)==0)
-         {
-             choice[1]=5;
-         }
-         if(strcmp(s6,student[studentNumber].Choice2)==0)
-         {
-             choice[1]=6;
-         }
-         if(strcmp(s7,student[studentNumber].Choice2)==0)
-         {
-            nopick = nopick + 1;
-         }
-         if(strcmp(s1,student[studentNumber].Choice3)==0)
-         {
-             choice[2]=1;
-         }
-         if(strcmp(s2,student[studentNumber].Choice3)==0)
-         {
-            choice[2]=2;
-         }
-         if(strcmp(s3,student[studentNumber].Choice3)==0)
-         {
-             choice[2]=3;
-         }
-         if(strcmp(s4,student[studentNumber].Choice3)==0)
-         {
-             choice[2]=4;
-         }
-         if(strcmp(s5,student[studentNumber].Choice3)==0)
-         {
-             choice[2]=5;
-         }
-         if(strcmp(s6,student[studentNumber].Choice3)==0)
-         {
-             choice[2]=6;
-         }
-         if(strcmp(s7,student[studentNumber].Choice3)==0)
-         {
-            nopick = nopick + 1;
-         }
-         if(strcmp(s1,student[studentNumber].Choice4)==0)
-         {
-             choice[3]=1;
-         }
-         if(strcmp(s2,student[studentNumber].Choice4)==0)
-         {
-             choice[3]=2;
-         }
-         if(strcmp(s3,student[studentNumber].Choice4)==0)
-         {
-             choice[3]=3;
-         }
-         if(strcmp(s4,student[studentNumber].Choice4)==0)
-         {
-             choice[3]=4;
-         }
-         if(strcmp(s5,student[studentNumber].Choice4)==0)
-         {
-             choice[3]=5;
-         }
-         if(strcmp(s6,student[studentNumber].Choice4)==0)
-         {
-             choice[3]=6;
-         }
-         if(strcmp(s7,student[studentNumber].Choice4)==0)
-         {
-            nopick = nopick + 1;
-         }
-         if(strcmp(s1,student[studentNumber].Choice5)==0)
-         {
-             choice[4]=1;
-         }
-         if(strcmp(s2,student[studentNumber].Choice5)==0)
-         {
-             choice[4]=2;
-         }
-         if(strcmp(s3,student[studentNumber].Choice5)==0)
-         {
-             choice[4]=3;
-         }
-         if(strcmp(s4,student[studentNumber].Choice5)==0)
-         {
-             choice[4]=4;
-         }
-         if(strcmp(s5,student[studentNumber].Choice5)==0)
-         {
-             choice[4]=5;
-         }
-         if(strcmp(s6,student[studentNumber].Choice5)==0)
-         {
-             choice[4]=6;
-         }
-         if(strcmp(s7,student[studentNumber].Choice5)==0)
-         {
-            nopick = nopick + 1;
-         }
-         if(strcmp(s1,student[studentNumber].Choice6)==0)
-         {
-             choice[5]=1;
-         }
-         if(strcmp(s2,student[studentNumber].Choice6)==0)
-         {
-             choice[5]=2;
-         }
-         if(strcmp(s3,student[studentNumber].Choice6)==0)
-         {
-             choice[5]=3;
-         }
-         if(strcmp(s4,student[studentNumber].Choice6)==0)
-         {
-             choice[5]=4;
-         }
-         if(strcmp(s5,student[studentNumber].Choice6)==0)
-         {
-             choice[5]=5;
-         }
-         if(strcmp(s6,student[studentNumber].Choice6)==0)
-         {
-             choice[5]=6;
-         }
-         if(strcmp(s7,student[studentNumber].Choice6)==0)
-        {
-            nopick = nopick + 1;
-        }
-printf("%d",nopick);
-
-        if (nopick >= 1)
-        {
-            for (int lol = 1; lol <= nopick; lol++ )
+            int lower = 1, upper = 6, count = 1;
+            srand(time(0));
+            for (int filler = 1; filler <= nopick;filler++)
             {
-                for (int order = 0; order <= 5; order ++)
-                {
-                    if (choice[order] == 0 && order < 5)
-                    {
-                    choice[order] = choice[(order + 1)];
-                    choice[order + 1] = 0;
-                    printf("\t\t\t%d %d %d %d %d %d %d \n\n\n\n", studentNumber, choice[0],choice[1],choice[2],choice[3],choice[4],choice[5]);
-                    }
-                }
-            }
-
-    int lower = 1, upper = 6, count = 1;
-    srand(time(0));
-
-
-  for (int filler = 1; filler <= nopick;filler++)
-  {
-  int i;
-    for (i = 0; i < count; i++) {
-        int num = (rand() %
+                int i;
+                for (i = 0; i < count; i++) {
+                int num = (rand() %
            (upper - lower + 1)) + lower;
         printf("%d ", num);
 
@@ -348,42 +260,24 @@ printf("%d",nopick);
                       if (choice[place] == 0)
                       {
                           choice[place]=num;
-
                           num = 0;
                       }
-
                   }}
 
 }
         }
-printf("\n\t\t\t%d %d %d %d %d %d %d \n\n\n\n", studentNumber, choice[0],choice[1],choice[2],choice[3],choice[4],choice[5]);
 
 fprintf(imgoingtodocalculus,"%d %d %d %d %d %d %d \n", studentNumber, choice[0],choice[1],choice[2],choice[3],choice[4],choice[5]);
-
-
      }
         n = 0;
         studentNumber++;
         CommaAmount = 0;
      //   printf("n value %d \nCommas: %d \nPosition: %d \n Character Value @ n: %c\nFirst Name: %s\nLast Name: %s\n School: %s \nStudent Number: %d\n", n, CommaAmount, position, str[n], student[studentNumber].NameFirst, student[studentNumber].NameLast, student[studentNumber].School, studentNumber);
-
     }
 
     fclose(fp);
     fclose(imgoingtodocalculus);
     studentNumber = studentNumber - 2;
-struct kids
-{
-    int name;
-    int choice1;
-    int choice2;
-    int choice3;
-    int choice4;
-    int class1;
-    int class2;
-    int class3;
-    int class4;
-    }studentchoice[1000];
 int techcount,artcount,musiccount,dramacount,computercount,othercount;
 int studentcap[6];
 int classes;
@@ -1594,132 +1488,69 @@ if(studentchoice[k].class1 == 0 || studentchoice[k].class2 == 0 || studentchoice
 printf("%d %d %d %d %d\n",k,studentchoice[k].class1,studentchoice[k].class2,studentchoice[k].class3,studentchoice[k].class4);
 }
 }
-int studentchecker;
-scanf("%d",&studentchecker);
-studentchecker--;
-
-printf("\nStudent %d:\n| Name: %s, %s \n| School: %s\n| Teacher: %s\n| Choice One: %s\n| Choice Two: %s\n| Choice Three: %s\n| Choice Four: %s\n| Choice Five: %s\n| Choice Six: %s", studentchecker, student[studentchecker].NameLast, student[studentchecker].NameFirst, student[studentchecker].School, student[studentchecker].Teacher, student[studentchecker].Choice1, student[studentchecker].Choice2, student[studentchecker].Choice3, student[studentchecker].Choice4, student[studentchecker].Choice5, student[studentchecker].Choice6);
-printf("\n\n%d %d %d %d %d",studentchecker,studentchoice[studentchecker].class1,studentchoice[studentchecker].class2,studentchoice[studentchecker].class3,studentchoice[studentchecker].class4 );
+studentchecker =1;
 FILE * DoomGuy;
 DoomGuy = fopen("DoomGuy.csv","w+");
-studentchecker =1;
 for(int spltr = 2; spltr <= heck; spltr++)
-{
-    studentchecker++;
+{   studentchecker++;
     fprintf(DoomGuy,"%s, %s",student[studentchecker].NameFirst,student[studentchecker].NameLast);
-if(studentchoice[studentchecker].class1 == 1)
-{
-    fprintf(DoomGuy,",Design and Technology");
-}
-if(studentchoice[studentchecker].class1 == 2)
-{
-    fprintf(DoomGuy,",Art");
-}
-if(studentchoice[studentchecker].class1 == 3)
-{
-    fprintf(DoomGuy,",Music/Vocals");
-}
-if(studentchoice[studentchecker].class1 == 4)
-{
-    fprintf(DoomGuy,",Drama");
-}
-if(studentchoice[studentchecker].class1 == 5)
-{
-    fprintf(DoomGuy,",Computer Applications");
-}
-if(studentchoice[studentchecker].class1 == 6)
-{
-    fprintf(DoomGuy,",Family Studies");
-}
-if(studentchoice[studentchecker].class1 == 7)
-{
-    fprintf(DoomGuy,",Guidance");
-}
-if(studentchoice[studentchecker].class2 == 1)
-{
-    fprintf(DoomGuy,",Design and Technology");
-}
-if(studentchoice[studentchecker].class2 == 2)
-{
-    fprintf(DoomGuy,",Art");
-}
-if(studentchoice[studentchecker].class2 == 3)
-{
-    fprintf(DoomGuy,",Music/Vocals");
-}
-if(studentchoice[studentchecker].class2 == 4)
-{
-    fprintf(DoomGuy,",Drama");
-}
-if(studentchoice[studentchecker].class2 == 5)
-{
-    fprintf(DoomGuy,",Computer Applications");
-}
-if(studentchoice[studentchecker].class2 == 6)
-{
-    fprintf(DoomGuy,",Family Studies");
-}
-if(studentchoice[studentchecker].class2 == 7)
-{
-    fprintf(DoomGuy,",Guidance");
-}
-if(studentchoice[studentchecker].class3 == 1)
-{
-    fprintf(DoomGuy,",Design and Technology");
-}
-if(studentchoice[studentchecker].class3 == 2)
-{
-    fprintf(DoomGuy,",Art");
-}
-if(studentchoice[studentchecker].class3 == 3)
-{
-    fprintf(DoomGuy,",Music/Vocals");
-}
-if(studentchoice[studentchecker].class3 == 4)
-{
-    fprintf(DoomGuy,",Drama");
-}
-if(studentchoice[studentchecker].class3 == 5)
-{
-    fprintf(DoomGuy,",Computer Applications");
-}
-if(studentchoice[studentchecker].class3 == 6)
-{
-    fprintf(DoomGuy,",Family Studies");
-}
-if(studentchoice[studentchecker].class3 == 7)
-{
-    fprintf(DoomGuy,",Guidance");
-}
-if(studentchoice[studentchecker].class4 == 1)
-{
-    fprintf(DoomGuy,",Design and Technology");
-}
-if(studentchoice[studentchecker].class4 == 2)
-{
-    fprintf(DoomGuy,",Art");
-}
-if(studentchoice[studentchecker].class4 == 3)
-{
-    fprintf(DoomGuy,",Music/Vocals");
-}
-if(studentchoice[studentchecker].class4 == 4)
-{
-    fprintf(DoomGuy,",Drama");
-}
-if(studentchoice[studentchecker].class4 == 5)
-{
-    fprintf(DoomGuy,",Computer Applications");
-}
-if(studentchoice[studentchecker].class4 == 6)
-{
-    fprintf(DoomGuy,",Family Studies");
-}
-if(studentchoice[studentchecker].class4 == 7)
-{
-    fprintf(DoomGuy,",Guidance");
-}
-fprintf(DoomGuy,", %s, %s\n",student[studentchecker].School,student[studentchecker].Teacher);
+    if(studentchoice[studentchecker].class1 == 1){
+    fprintf(DoomGuy,",Design and Technology");}
+    if(studentchoice[studentchecker].class1 == 2){
+    fprintf(DoomGuy,",Art");}
+    if(studentchoice[studentchecker].class1 == 3){
+    fprintf(DoomGuy,",Music/Vocals");}
+    if(studentchoice[studentchecker].class1 == 4){
+    fprintf(DoomGuy,",Drama");}
+    if(studentchoice[studentchecker].class1 == 5){
+    fprintf(DoomGuy,",Computer Applications");}
+    if(studentchoice[studentchecker].class1 == 6){
+    fprintf(DoomGuy,",Family Studies");}
+    if(studentchoice[studentchecker].class1 == 7){
+    fprintf(DoomGuy,",Guidance");}
+    if(studentchoice[studentchecker].class2 == 1){
+    fprintf(DoomGuy,",Design and Technology");}
+    if(studentchoice[studentchecker].class2 == 2){
+    fprintf(DoomGuy,",Art");}
+    if(studentchoice[studentchecker].class2 == 3){
+    fprintf(DoomGuy,",Music/Vocals");}
+    if(studentchoice[studentchecker].class2 == 4){
+    fprintf(DoomGuy,",Drama");}
+    if(studentchoice[studentchecker].class2 == 5){
+    fprintf(DoomGuy,",Computer Applications");}
+    if(studentchoice[studentchecker].class2 == 6){
+    fprintf(DoomGuy,",Family Studies");}
+    if(studentchoice[studentchecker].class2 == 7){
+    fprintf(DoomGuy,",Guidance");}
+    if(studentchoice[studentchecker].class3 == 1){
+    fprintf(DoomGuy,",Design and Technology");}
+    if(studentchoice[studentchecker].class3 == 2){
+    fprintf(DoomGuy,",Art");}
+    if(studentchoice[studentchecker].class3 == 3){
+    fprintf(DoomGuy,",Music/Vocals");}
+    if(studentchoice[studentchecker].class3 == 4){
+    fprintf(DoomGuy,",Drama");}
+    if(studentchoice[studentchecker].class3 == 5){
+    fprintf(DoomGuy,",Computer Applications");}
+    if(studentchoice[studentchecker].class3 == 6){
+    fprintf(DoomGuy,",Family Studies");}
+    if(studentchoice[studentchecker].class3 == 7){
+    fprintf(DoomGuy,",Guidance");}
+    if(studentchoice[studentchecker].class4 == 1){
+    fprintf(DoomGuy,",Design and Technology");}
+    if(studentchoice[studentchecker].class4 == 2){
+    fprintf(DoomGuy,",Art");}
+    if(studentchoice[studentchecker].class4 == 3){
+    fprintf(DoomGuy,",Music/Vocals");}
+    if(studentchoice[studentchecker].class4 == 4){
+    fprintf(DoomGuy,",Drama");}
+    if(studentchoice[studentchecker].class4 == 5){
+    fprintf(DoomGuy,",Computer Applications");}
+    if(studentchoice[studentchecker].class4 == 6){
+    fprintf(DoomGuy,",Family Studies");}
+    if(studentchoice[studentchecker].class4 == 7){
+    fprintf(DoomGuy,",Guidance");}
+fprintf(DoomGuy,", %s, %s\n",student[studentchecker].School,student[studentchecker].Teacher); // print to csv file
 }
 fclose(DoomGuy);
 fclose(class2);
@@ -1728,8 +1559,8 @@ fclose(computer);
 fclose(drama);
 fclose(music);
 fclose(tech);
-
-//filler program
+printf("the sorting program has finished sorting: %d students.\n\n\n\n",heck);
+printf("this program was created by Keegan Andrus,"); //put your names in boys 
 
     return 0;
     }
