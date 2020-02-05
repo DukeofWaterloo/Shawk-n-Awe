@@ -1,9 +1,10 @@
 # depslib dependency file v1.0
-1580756658 source:c:\users\kandr_58v7rrf\onedrive\desktop\new folder (4)\fial thing\shmak.c
+1580863139 source:c:\users\kandr_58v7rrf\onedrive\desktop\new folder (4)\fial thing\shmak.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
-	<stdio.h>
-	<stdlib.h>
 	<time.h>
+	<conio.h>
+	<process.h>
+	<dir.h>
 

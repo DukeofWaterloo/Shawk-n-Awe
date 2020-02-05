@@ -1,16 +1,25 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include <stdio.h>
-#include <stdlib.h>
 #include <time.h>
+#include<conio.h>
+#include<process.h>
+#include<dir.h>
 #define MAXCHAR 1000
+#define SIZE 25
 int main(){
+    int check;
     FILE * imgoingtodocalculus;
     imgoingtodocalculus = fopen("students.txt","w+"); //
     FILE *fp;
     char str[MAXCHAR];
-    char* filename = "./Experience a Day 2019.csv";
+system("dir/p");
+    char *filename;
+    filename=malloc(SIZE*sizeof(char));
+    printf("\n\nEnter the name of the excel file (.csv) that has the raw student data.\nIt will be listed above (eg 'Experience a Day 2019.csv')\n");
+    gets(filename);
+    FILE * subjects;
+    subjects = fopen("subjects.csv","w+");
     char s1[]="Drama";
     char s2[]="Art";
     char s3[]="Family Studies";
@@ -53,6 +62,7 @@ int main(){
         int class3;
         int class4;
     }studentchoice[1000];
+
     fp = fopen(filename, "r");
     if (fp == NULL){
         printf("Could not open file %s", filename);
@@ -224,7 +234,7 @@ int main(){
         totalclass = 0;
         classes= 4;
         recomended = (studentNumber*3)/(6* classes);
-        printf("|\tclass name\t|     recomended size\t| class size\n");
+        printf("\n\n\n\n|\tclass name\t|     recomended size\t| class size\n");
         printf(" ----------------------------------------------------------------\n");
         printf("| Family Studies class\t|\t\t%d\t|\t", recomended);
         scanf("%d",&studentcap[0]);
@@ -274,6 +284,36 @@ int main(){
                 printf("\nthe total number of spaces avalable is larger than the needed.\nthis may cause the program to generate inconsistant class sizes.\nto change the class size, please press 1, or 2 to continue anyway.\n\n");
                 scanf("%d",&classs);}}
                 printf("\n\n\n\n\n\n\n\n\n\n\n\n");}
+                int room[7];
+                printf("please enter the room numbers for each class\n");
+                printf("Drama                   :");
+                scanf("%d",&room[0]);
+                printf("Art                     :");
+                scanf("%d",&room[1]);
+                printf("Family Studies          :");
+                scanf("%d",&room[2]);
+                printf("Music/Vocals            :");
+                scanf("%d",&room[3]);
+                printf("Computer Applications   :");
+                scanf("%d",&room[4]);
+                printf("Design and Technology   :");
+                scanf("%d",&room[5]);
+                printf("Guidance                :");
+                scanf("%d",&room[6]);
+                fprintf(subjects,"Subject,Room\n");
+                fprintf(subjects,"Drama,%d\n",room[0]);
+                fprintf(subjects,"Art,%d\n",room[1]);
+                fprintf(subjects,"Family Studies,%d\n",room[2]);
+                fprintf(subjects,"Music/Vocals,%d\n",room[3]);
+                fprintf(subjects,"Computer Applications,%d\n",room[4]);
+                fprintf(subjects,"Design and Technology,%d\n",room[5]);
+                fprintf(subjects,"Guidance,%d\n",room[6]);
+
+
+                fclose(subjects);
+
+
+
         FILE * tech;
         tech = fopen("tech.txt", "w+");
         FILE * art;
@@ -1270,43 +1310,7 @@ else {}}
 else{
     duplicates[andrew] = duplicates[duke];
     andrew = andrew +1;}}
-                    fail = 0;
-                    /*if(clean >= 999){
-                        int tomany[]= {0,0,0,0,0,0,0};
-                        for(int keegan = 2; keegan <= heck; keegan++){
-                            tomany[studentchoice[keegan].class1 -1]++;
-                            tomany[studentchoice[keegan].class2 -1]++;
-                            tomany[studentchoice[keegan].class3 -1]++;
-                            tomany[studentchoice[keegan].class4 -1]++;
-                            printf("%d ",keegan - 1);
-                            if (studentchoice[keegan].class1 == 1 || studentchoice[keegan].class2 == 1 || studentchoice[keegan].class3 == 1 || studentchoice[keegan].class4 == 1){
-                                SetColor(4);}
-                            printf("%d ",tomany[0]);
-                            SetColor(7);
-                            if (studentchoice[keegan].class1 == 2 || studentchoice[keegan].class2 == 2 || studentchoice[keegan].class3 == 2 || studentchoice[keegan].class4 == 2){
-                                SetColor(4);}
-                            printf("%d ",tomany[1]);
-                            SetColor(7);
-                            if (studentchoice[keegan].class1 == 3 || studentchoice[keegan].class2 == 3 || studentchoice[keegan].class3 == 3 || studentchoice[keegan].class4 == 3){
-                                SetColor(4);}
-                            printf("%d ",tomany[2]);
-                            SetColor(7);
-                            if (studentchoice[keegan].class1 == 4 || studentchoice[keegan].class2 == 4 || studentchoice[keegan].class3 == 4 || studentchoice[keegan].class4 == 4){
-                                SetColor(4);}
-                            printf("%d ",tomany[3]);
-                            SetColor(7);
-                            if (studentchoice[keegan].class1 == 5 || studentchoice[keegan].class2 == 5 || studentchoice[keegan].class3 == 5 || studentchoice[keegan].class4 == 5){
-                                SetColor(4);}
-                            printf("%d ",tomany[4]);
-                            SetColor(7);
-                            if (studentchoice[keegan].class1 == 6 || studentchoice[keegan].class2 == 6 || studentchoice[keegan].class3 == 6 || studentchoice[keegan].class4 == 6){
-                                SetColor(4);}
-                            printf("%d ",tomany[5]);
-                            SetColor(7);
-                            if (studentchoice[keegan].class1 == 7 || studentchoice[keegan].class2 == 7 || studentchoice[keegan].class3 == 7 || studentchoice[keegan].class4 == 7){
-                                SetColor(4);}
-                            printf("%d\n\n",tomany[6]);
-                            SetColor(7);}}*/}}
+                    fail = 0;}}
             studentchecker =1;
             FILE * DoomGuy;
             DoomGuy = fopen("DoomGuy.csv","w+");
@@ -1377,6 +1381,212 @@ else{
             fclose(drama);
             fclose(music);
             fclose(tech);
-            printf("the sorting program has finished sorting: %d students.\n\n\n\n",heck);
-            printf("this program was created by:\nKeegan Andrus, Duke Gand, Nick Honrath,\nKyle Leamen, Jack Ivy, Andrew Krynski\n\n"); //put your names in boys
+            printf("\tthe sorting program has finished sorting: %d students.\n\twould you like to print an attendance sheet for each subject?\n\tyes = 1\tno=2\n",heck);
+            int boss = 0;
+            scanf("%d",&boss);
+           if(boss == 1){
+                int art[4]={0,0,0,0};
+                int Drama[4]={0,0,0,0};
+                int Guidance[4]={0,0,0,0};
+                int MusicVocals[4]={0,0,0,0};
+                int FamilyStudies[4]={0,0,0,0};
+                int DesignandTechnology[4]={0,0,0,0};
+                int ComputerApplications[4]={0,0,0,0};
+                FILE * ComputerApplications1;
+                ComputerApplications1 = fopen("ComputerApplications.txt", "w+");
+                FILE * DesignandTechnology1;
+                DesignandTechnology1  = fopen("DesignandTechnology.txt", "w+");
+                FILE * FamilyStudies1;
+                FamilyStudies1 = fopen("FamilyStudies.txt", "w+");
+                FILE * MusicVocals1;
+                MusicVocals1 = fopen("MusicVocals.txt", "w+");
+                FILE * Guidance1;
+                Guidance1 = fopen("Guidance.txt", "w+");
+                FILE * Drama1;
+                Drama1 = fopen("Drama.txt", "w+");
+                FILE * Art1;
+                Art1 = fopen("Art.txt", "w+");
+                fprintf(ComputerApplications1,"\n\n\np1\nattendance| student name: first,last\n\n");
+                fprintf(DesignandTechnology1,"\n\n\np1\nattendance| student name: first,last\n\n");
+                fprintf(FamilyStudies1,"\n\n\np1\nattendance| student name: first,last\n\n");
+                fprintf(MusicVocals1,"\n\n\np1\nattendance| student name: first,last\n\n");
+                fprintf(Guidance1,"\n\n\np1\nattendance| student name: first,last\n\n");
+                fprintf(Drama1,"\n\n\np1\nattendance| student name: first,last\n\n");
+                fprintf(Art1,"\n\n\np1\nattendance| student name: first,last\n\n");
+                for (int keegan= 2; keegan <=heck;keegan++){
+                    switch(studentchoice[keegan].class1){
+                            case 1:{
+                                fprintf(DesignandTechnology1,"|_|  %s, %s\n",student[keegan].NameFirst,student[keegan].NameLast);
+                                DesignandTechnology[0]++;}
+                                break;
+                            case 2:{
+                                fprintf(Art1,"|_|  %s, %s\n",student[keegan].NameFirst,student[keegan].NameLast);
+                                art[0]++;}
+                                break;
+                            case 3:{
+                                fprintf(MusicVocals1,"|_|  %s, %s\n",student[keegan].NameFirst,student[keegan].NameLast);
+                                MusicVocals[0]++;}
+                                break;
+                            case 4:{
+                                fprintf(Drama1,"|_|  %s, %s\n",student[keegan].NameFirst,student[keegan].NameLast);
+                                Drama[0]++;}
+                                break;
+                            case 5:{
+                                fprintf(ComputerApplications1,"|_|  %s, %s\n",student[keegan].NameFirst,student[keegan].NameLast);
+                                ComputerApplications[0]++;}
+                                break;
+                            case 6:{
+                                fprintf(FamilyStudies1,"|_|  %s, %s\n",student[keegan].NameFirst,student[keegan].NameLast);
+                                FamilyStudies[0]++;}
+                                break;
+                            case 7:{
+                                fprintf(Guidance1,"|_|  %s, %s\n",student[keegan].NameFirst,student[keegan].NameLast);
+                                Guidance[0]++;}
+                                break;
+                            default:
+                                break;}}
+                fprintf(ComputerApplications1,"\n\n\n p2\nattendance| student name: first,last\n\n");
+                fprintf(DesignandTechnology1,"\n\n\n p2\nattendance| student name: first,last\n\n");
+                fprintf(FamilyStudies1,"\n\n\n p2\nattendance| student name: first,last\n\n");
+                fprintf(MusicVocals1,"\n\n\n p2\nattendance| student name: first,last\n\n");
+                fprintf(Guidance1,"\n\n\n p2\nattendance| student name: first,last\n\n");
+                fprintf(Drama1,"\n\n\n p2\nattendance| student name: first,last\n\n");
+                fprintf(Art1,"\n\n\n p2\nattendance| student name: first,last\n\n");
+                    for (int andrew= 2; andrew <=heck;andrew++){
+                    switch(studentchoice[andrew].class1){
+                            case 1:{
+                                fprintf(DesignandTechnology1,"|_|  %s, %s\n",student[andrew].NameFirst,student[andrew].NameLast);
+                                DesignandTechnology[1]++;}
+                                break;
+                            case 2:{
+                                fprintf(Art1,"|_|  %s, %s\n",student[andrew].NameFirst,student[andrew].NameLast);
+                                art[1]++;}
+                                break;
+                            case 3:{
+                                fprintf(MusicVocals1,"|_|  %s, %s\n",student[andrew].NameFirst,student[andrew].NameLast);
+                                MusicVocals[1]++;}
+                                break;
+                            case 4:{
+                                fprintf(Drama1,"|_|  %s, %s\n",student[andrew].NameFirst,student[andrew].NameLast);
+                                Drama[1]++;}
+                                break;
+                            case 5:{
+                                fprintf(ComputerApplications1,"|_|  %s, %s\n",student[andrew].NameFirst,student[andrew].NameLast);
+                                ComputerApplications[1]++;}
+                                break;
+                            case 6:{
+                                fprintf(FamilyStudies1,"|_|  %s, %s\n",student[andrew].NameFirst,student[andrew].NameLast);
+                                FamilyStudies[1]++;}
+                                break;
+                            case 7:{
+                                fprintf(Guidance1,"|_|  %s, %s\n",student[andrew].NameFirst,student[andrew].NameLast);
+                                Guidance[1]++;}
+                                break;
+                            default:
+                                break;}}
+                                fprintf(ComputerApplications1,"\n\n\np3\nattendance| student name: first,last\n\n");
+                                fprintf(DesignandTechnology1,"\n\n\np3\nattendance| student name: first,last\n\n");
+                                fprintf(FamilyStudies1,"\n\n\np3\nattendance| student name: first,last\n\n");
+                                fprintf(MusicVocals1,"\n\n\np3\nattendance| student name: first,last\n\n");
+                                fprintf(Guidance1,"\n\n\np3\nattendance| student name: first,last\n\n");
+                                fprintf(Drama1,"\n\n\np3\nattendance| student name: first,last\n\n");
+                                fprintf(Art1,"\n\n\np3\nattendance| student name: first,last\n\n");
+                      for (int duke= 2; duke <=heck;duke++){
+                    switch(studentchoice[duke].class1){
+                            case 1:{
+                                fprintf(DesignandTechnology1,"|_|  %s, %s\n",student[duke].NameFirst,student[duke].NameLast);
+                                DesignandTechnology[2]++;}
+                                break;
+                            case 2:{
+                                fprintf(Art1,"|_|  %s, %s\n",student[duke].NameFirst,student[duke].NameLast);
+                                art[2]++;}
+                                break;
+                            case 3:{
+                                fprintf(MusicVocals1,"|_|  %s, %s\n",student[duke].NameFirst,student[duke].NameLast);
+                                MusicVocals[2]++;}
+                                break;
+                            case 4:{
+                                fprintf(Drama1,"|_|  %s, %s\n",student[duke].NameFirst,student[duke].NameLast);
+                                Drama[2]++;}
+                                break;
+                            case 5:{
+                                fprintf(ComputerApplications1,"|_|  %s, %s\n",student[duke].NameFirst,student[duke].NameLast);
+                                ComputerApplications[2]++;}
+                                break;
+                            case 6:{
+                                fprintf(FamilyStudies1,"|_|  %s, %s\n",student[duke].NameFirst,student[duke].NameLast);
+                                FamilyStudies[2]++;}
+                                break;
+                            case 7:{
+                                fprintf(Guidance1,"|_|  %s, %s\n",student[duke].NameFirst,student[duke].NameLast);
+                                Guidance[2]++;}
+                                break;
+                            default:
+                                break;}}
+                fprintf(ComputerApplications1,"\n\n\np4\nattendance| student name: first,last\n\n");
+                fprintf(DesignandTechnology1,"\n\n\np4\nattendance| student name: first,last\n\n");
+                fprintf(FamilyStudies1,"\n\n\np4\nattendance| student name: first,last\n\n");
+                fprintf(MusicVocals1,"\n\n\np4\nattendance| student name: first,last\n\n");
+                fprintf(Guidance1,"\n\n\np4\nattendance| student name: first,last\n\n");
+                fprintf(Drama1,"\n\n\np4\nattendance| student name: first,last\n\n");
+                fprintf(Art1,"\n\n\np4\nattendance| student name: first,last\n\n");
+                    for (int nick= 2; nick <=heck;nick++){
+                    switch(studentchoice[nick].class1){
+                            case 1:{
+                                fprintf(DesignandTechnology1,"|_|  %s, %s\n",student[nick].NameFirst,student[nick].NameLast);
+                                DesignandTechnology[3]++;}
+                                break;
+                            case 2:{
+                                fprintf(Art1,"|_|  %s, %s\n",student[nick].NameFirst,student[nick].NameLast);
+                                art[3]++;}
+                                break;
+                            case 3:{
+                                fprintf(MusicVocals1,"|_|  %s, %s\n",student[nick].NameFirst,student[nick].NameLast);
+                                MusicVocals[3]++;}
+                                break;
+                            case 4:{
+                                fprintf(Drama1,"|_|  %s, %s\n",student[nick].NameFirst,student[nick].NameLast);
+                                Drama[3]++;}
+                                break;
+                            case 5:{
+                                fprintf(ComputerApplications1,"|_|  %s, %s\n",student[nick].NameFirst,student[nick].NameLast);
+                                ComputerApplications[3]++;}
+                                break;
+                            case 6:{
+                                fprintf(FamilyStudies1,"|_|  %s, %s\n",student[nick].NameFirst,student[nick].NameLast);
+                                FamilyStudies[3]++;}
+                                break;
+                            case 7:{
+                                fprintf(Guidance1,"|_|  %s, %s\n",student[nick].NameFirst,student[nick].NameLast);
+                                Guidance[3]++;}
+                                break;
+                            default:
+                                break;}}
+                fprintf(ComputerApplications1,"\n\n\n\nclass sizes: P1:%d, P2:%d, P3:%d, P4:%d",ComputerApplications[0],ComputerApplications[1],ComputerApplications[2],ComputerApplications[3]);
+                fprintf(DesignandTechnology1,"\n\n\n\nclass sizes: P1:%d, P2:%d, P3:%d, P4:%d",DesignandTechnology[0],DesignandTechnology[1],DesignandTechnology[2],DesignandTechnology[3]);
+                fprintf(FamilyStudies1,"\n\n\n\nclass sizes: P1:%d, P2:%d, P3:%d, P4:%d",FamilyStudies[0],FamilyStudies[1],FamilyStudies[2],FamilyStudies[3]);
+                fprintf(MusicVocals1,"\n\n\n\nclass sizes: P1:%d, P2:%d, P3:%d, P4:%d",MusicVocals[0],MusicVocals[1],MusicVocals[2],MusicVocals[3]);
+                fprintf(Guidance1,"\n\n\n\nclass sizes: P1:%d, P2:%d, P3:%d, P4:%d",Guidance[0],Guidance[1],Guidance[2],Guidance[3]);
+                fprintf(Drama1,"\n\n\n\nclass sizes: P1:%d, P2:%d, P3:%d, P4:%d",Drama[0],Drama[1],Drama[2],Drama[3]);
+                fprintf(Art1,"\n\n\n\nclass sizes: P1:%d, P2:%d, P3:%d, P4:%d",art[0],art[1],art[2],art[3]);
+                fclose(ComputerApplications1);
+                fclose(DesignandTechnology1);
+                fclose(FamilyStudies1);
+                fclose(MusicVocals1);
+                fclose(Guidance1);
+                fclose(Drama1);
+                fclose(Art1);}
+
+            if(boss >= 2){
+            printf("\n\n");}
+            printf("\nwould you like to view the location of the files and data?\nyes = 1, no = 2");
+            int enhance= 0;
+            scanf("%d",&enhance);
+            if (enhance == 1)
+            {
+                system("dir/p");
+            }
+            else{}
+
+            printf("\n\tthis program was created by: the students of Mr.Dimitriadis' class\n\tSorting Algorithim Lads - Keegan Andrus\n\tI/O Gentlemen - Kyle, Nick, & Duke\n\tExcel magic - Andrew Krynski\n\tHead of Code Safety and Debugging - Jack\n\n\tinspiration -Mr.Dimitriadis\n\n"); //put your names in boys
             return 0;}}
