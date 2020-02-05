@@ -1,0 +1,17 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+int structuretofile()
+{
+FILE * shven;
+shven = fopen("students2.txt", "r+");
+FILE * stud;
+stud = fopen("students.txt", "w+");
+
+int end;
+for (int loop = 1; loop <= end; )
+fclose(shven);
+fclose(stud);
+
+}
+
