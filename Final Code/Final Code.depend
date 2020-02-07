@@ -1,0 +1,10 @@
+# depslib dependency file v1.0
+1581042049 source:c:\users\kandr_58v7rrf\onedrive\desktop\new folder (4)\final code\student sorter.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<time.h>
+	<conio.h>
+	<process.h>
+	<dir.h>
+
