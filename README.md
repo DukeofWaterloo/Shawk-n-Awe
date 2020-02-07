@@ -17,3 +17,4 @@ Head of Code Safety and Debugging - Jack
 Ideal deadline is get this done by Monday January 20th 2020, with slack of two days to write Wiki-Hows and manuals  
 
 The big day is Wednesday January 29th 2020... 
+date posponed with strikes... undetermined.
